@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>508</width>
+    <height>467</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AppliBDD</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ressources.qrc">
+    <normaloff>:/logo/icone/logo.png</normaloff>:/logo/icone/logo.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="7" column="1">
+     <widget class="QPushButton" name="butDelHisto">
+      <property name="text">
+       <string>&amp;Clear</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2" colspan="2">
+     <widget class="QComboBox" name="cbBdd"/>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="labelTable">
+      <property name="text">
+       <string>Tables :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="labelChamp">
+      <property name="text">
+       <string>Fields :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3" rowspan="3">
+     <widget class="QListWidget" name="listWidgetTable"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="butHistoriser">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>&amp;History</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4" rowspan="3">
+     <widget class="QListWidget" name="listWidgetChamp"/>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QTextEdit" name="textEditRequete"/>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="butExec">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>&amp;?</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="5">
+     <widget class="QTableWidget" name="tableResRequete"/>
+    </item>
+    <item row="5" column="3" colspan="2">
+     <widget class="QPushButton" name="butExport">
+      <property name="text">
+       <string>&amp;Export</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3" colspan="2">
+     <widget class="QPushButton" name="butSauvegarder">
+      <property name="text">
+       <string>&amp;Save</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="5">
+     <widget class="QListWidget" name="listWidgetHisto"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="butSuppr">
+      <property name="text">
+       <string>&amp;Delete</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="butOpenHisto">
+      <property name="text">
+       <string>&amp;Open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelBDD">
+      <property name="text">
+       <string>Data Base :</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>508</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMore">
+    <property name="title">
+     <string>&amp;More</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuMore"/>
+  </widget>
+  <action name="actionDisconnect">
+   <property name="text">
+    <string>Disconnect</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

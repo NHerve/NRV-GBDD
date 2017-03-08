@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/image"/>
+    <qresource prefix="/logo">
+        <file>icone/logo.png</file>
+    </qresource>
+    <qresource prefix="/langue"/>
+</RCC>
