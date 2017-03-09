@@ -51,10 +51,11 @@ void DlgConnexion::on_butConnexion_clicked()
 {
     QString qsUser =  ui->lineEditUser->text();
     QString qsMdp = ui->lineEditPassword->text();
+    QString qsServer = ui->lineEditServer->text();
 
     QSqlDatabase maBase=QSqlDatabase::addDatabase("QMYSQL");
     maBase.setDatabaseName("mysql");
-    maBase.setHostName("localhost");
+    maBase.setHostName(qsServer);
     maBase.setUserName(qsUser);
     maBase.setPassword(qsMdp);
     if(maBase.open())

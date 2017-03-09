@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>313</width>
-    <height>114</height>
+    <width>284</width>
+    <height>148</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,17 +25,17 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="1">
+   <item row="0" column="2" colspan="2">
     <widget class="QLineEdit" name="lineEditUser"/>
    </item>
-   <item row="1" column="0">
+   <item row="1" column="0" colspan="2">
     <widget class="QLabel" name="labelPassword">
      <property name="text">
       <string>Password :</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="1" column="2" colspan="2">
     <widget class="QLineEdit" name="lineEditPassword">
      <property name="text">
       <string>azerty</string>
@@ -45,22 +45,43 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
-    <widget class="QPushButton" name="butConnexion">
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>&amp;Connection</string>
+      <string>Server :</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
+   <item row="2" column="2" colspan="2">
+    <widget class="QLineEdit" name="lineEditServer">
+     <property name="text">
+      <string>localhost</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2">
     <widget class="QPushButton" name="butCancel">
      <property name="text">
       <string>&amp;Cancel</string>
      </property>
     </widget>
    </item>
+   <item row="3" column="3">
+    <widget class="QPushButton" name="butConnexion">
+     <property name="text">
+      <string>&amp;Connection</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEditUser</tabstop>
+  <tabstop>lineEditPassword</tabstop>
+  <tabstop>lineEditServer</tabstop>
+  <tabstop>butConnexion</tabstop>
+  <tabstop>butCancel</tabstop>
+ </tabstops>
  <resources>
   <include location="ressources.qrc"/>
  </resources>
