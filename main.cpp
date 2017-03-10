@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&myappTranslator);
     qDebug()<<QLibraryInfo::location(QLibraryInfo::TranslationsPath);
 
+    QSqlDatabase maBase=QSqlDatabase::addDatabase("QMYSQL");
     DlgConnexion login;
 
     while(login.exec()==QDialog::Accepted)

@@ -42,9 +42,11 @@ void MainWindow::on_cbBdd_currentIndexChanged(const QString &arg1)
     qDebug()<<"on_cbBdd_currentIndexChanged"<<endl;
     ui->listWidgetChamp->clear();
     QString qsBddUse = ui->cbBdd->currentText();
-    QSqlQuery reqBddUse("use "+qsBddUse + ";");
-
-    if(reqBddUse.exec())
+    QSqlDatabase dataBase = QSqlDatabase::database();
+    dataBase.setDatabaseName(qsBddUse);
+    //QSqlQuery reqBddUse("use "+qsBddUse + ";");
+    dataBase.close();
+    if(dataBase.open())
     {
         ui->listWidgetTable->clear();
         QSqlQuery reqBddTable("show tables;");

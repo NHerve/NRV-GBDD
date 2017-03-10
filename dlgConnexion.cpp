@@ -2,6 +2,8 @@
 #include "ui_dlgConnexion.h"
 #include <QSqlDatabase>
 #include <QDebug>
+#include <QSqlError>
+#include <QMessageBox>
 
 
 DlgConnexion::DlgConnexion(QWidget *parent) :
@@ -53,8 +55,8 @@ void DlgConnexion::on_butConnexion_clicked()
     QString qsMdp = ui->lineEditPassword->text();
     QString qsServer = ui->lineEditServer->text();
 
-    QSqlDatabase maBase=QSqlDatabase::addDatabase("QMYSQL");
-    maBase.setDatabaseName("mysql");
+    //QSqlDatabase maBase=QSqlDatabase::addDatabase("QMYSQL");
+    QSqlDatabase maBase = QSqlDatabase::database();
     maBase.setHostName(qsServer);
     maBase.setUserName(qsUser);
     maBase.setPassword(qsMdp);
@@ -65,6 +67,9 @@ void DlgConnexion::on_butConnexion_clicked()
     }else
     {
         qDebug()<<"connection a la base a echoué"<<endl;
+        qDebug()<<maBase.lastError()<<endl;
+        QString qsSqlError = maBase.lastError().text();
+        QMessageBox::critical(this, tr("Error"), qsSqlError);
     }
 
 }
