@@ -42,8 +42,6 @@ private slots:
 
     void on_actionAbout_triggered();
 
-    void on_actionDisconnect_triggered();
-
 private:
     Ui::MainWindow *ui;
 };
