@@ -173,6 +173,7 @@ void MainWindow::on_butOpenHisto_clicked()
         return;
     }
     QTextStream in(&file);
+    ui->listWidgetHisto->clear();
     while (!in.atEnd())
     {
         QString line = in.readLine();
